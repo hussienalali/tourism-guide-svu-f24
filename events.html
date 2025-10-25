@@ -24,7 +24,7 @@
 <body>
   <div class="container-fluid">
     <header>
-      <!-- nav bar -->
+
       <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
       <img src="./assets/لوغو لموقع يحتوي على فعاليات سياحية متنوعة اسمه دليلك (1).jpg" alt="Logo" width="80" height="74" class="d-inline-block align-text-top">
@@ -50,15 +50,23 @@
        
       </ul>
     </div>
- 
+  <div class="d-flex align-items-center ms-3 gap-2 p-2">
+        <a href="index.html">
+          <img src="https://flagcdn.com/40x30/sy.png" width="40" height="30" alt="Arabic" title="العربية">
+        </a>
+        <a href="index_en.html">
+         <img src="https://flagcdn.com/40x30/us.png" width="40" height="30" alt="English" title="English">
+        </a>
+        </div>
 </nav>
+
        
     </header>
   
       
 
 
-<!
+
 <form class="row g-2 align-items-center justify-content-center bg-white p-3 rounded shadow-sm mb-4" id="filterForm" onsubmit="return false;">
   <div class="col-md-3">
     <input type="search" id="eventSearchInput" class="form-control rounded" placeholder="ابحث عن فعالية..." aria-label="Search" />
@@ -72,7 +80,7 @@
       <option value="موسيقى" >موسيقى</option>
       <option value="عائلي" >عائلي</option>
       <option value="ثقافة" >ثقافة</option>
-      <option value="رياضة" class="sport"> رياضة</option>
+      <option value="رياضة" > رياضة</option>
   </div>
   <div class="col-md-2">
     <input type="text" id="locationFilter" class="form-control" placeholder="الموقع" />
@@ -87,40 +95,53 @@
   <div class="card m-2 col-6 p-1" style="width: 18rem; height: 33rem">
   <img src="./assets/pexels-bertellifotografia-2608517.jpg" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">حفل دار الاوبرا</h5>
-         <p> دمشق</p>
-        <p>   دار الاوبرا </p>
-    <p class="card-text">استمتع بجمال الموسيقة بدار الاوبرا بدمشق</p>
-  <p class="card-date">التاريخ: 2025-11-05</p>
+      <h5 class="card-title" data-i18n="event.1.title">حفل دار الاوبرا</h5>
+           <p data-i18n="event.1.location">ا دمشق</p>
+          <p data-i18n="event.1.venue">   بدار الاوبرا </p>
+      <p class="card-text" data-i18n="event.1.desc">استمتع بجمال الموسيقة بدار الاوبرا بدمشق</p>
+    <p class="card-date">التاريخ: 2025-11-05</p>
 
-    <a href="#" class="border-2 w-25 p-2 m-1 rounded music">موسيقى</a>
-  <a href="event.html?id=1" class="border-2 w-25 p-2 m-1 rounded custom-border">التفاصيل </a>
+      <a href="#" class="border-2 w-25 p-2 m-1 rounded music" data-i18n="event.1.category">موسيقى</a>
+    <a href="event.html?id=1" class="border-2 w-25 p-2 m-1 rounded custom-border" data-i18n="card.details">التفاصيل </a>
 
   </div>
 </div>
 <div class="card col-6 m-2 p-1" style="width: 18rem;height: 33rem">
   <img src="./assets/pexels-jibarofoto-2774556.jpg" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">عرض فلم the lion king</h5>
-        </ul>
-        <!-- language flags -->
-        <div class="d-flex align-items-center ms-3 gap-2 p-2">
-        <a href="index.html">
-          <img src="https://flagcdn.com/40x30/sy.png" width="40" height="30" alt="Arabic" title="العربية">
-        </a>
-        <a href="index_en.html">
-         <img src="https://flagcdn.com/40x30/us.png" width="40" height="30" alt="English" title="English">
-        </a>
-      
-        </div>
-    <h5 class="card-title">مباراة الاتحاد والكرامة</h5>
-    <p class="card-text">حلب</p>
-    <p class="card-text">ستاد حلب الدولي  </p>
-    <p class="card-text">لا تفوت كلاسيكو الدوري السوري المشتعل </p>
-  <p class="card-date">التاريخ: 2025-12-01</p>
-    <a href="#" class="border-2 w-25 p-2 m-1 rounded  sport">رياضة</a>
-  <a href="event.html?id=4" class="border-2 w-25 p-2 m-1 rounded custom-border    ">التفاصيل</a>
+    <h5 class="card-title" data-i18n="event.2.title">عرض فلم the lion king</h5>
+        <p data-i18n="event.2.location">حمص</p>
+        <p data-i18n="event.2.venue"> سينما حمص</p>
+        <p  class="card-text" data-i18n="event.2.desc">احجز الان لمشاهدة فلم الطفولة مع عائلتك </p>
+  <p class="card-date">التاريخ: 2025-10-10</p>
+    <a href="#" class="border-2 w-25 p-2 m-1 rounded family" data-i18n="event.2.category">عائلي </a>
+  <a href="event.html?id=2" class="border-2 w-25 p-2 m-1 rounded custom-border" data-i18n="card.details">التفاصيل</a>
   </div>
+</div>
+<div class="card  m-2 col-6 p-1" style="width: 18rem;height: 33rem">
+  <img src="./assets/pexels-zhuhehuai-716276.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title" data-i18n="event.3.title">معرض الفن المعاصر</h5>
+    <p class="card-text" data-i18n="event.3.location">  اللاذقية  </p>
+    <p class="card-text" data-i18n="event.3.venue">     معرص اللاذقية للفنون </p>
+    <p class="card-text" data-i18n="event.3.desc">ترقبوا اجمل اللوحات الفنية في معرص اللاذقية للفنون </p>
+  <p class="card-date">التاريخ: 2025-09-20</p>
+    <a href="#" class="border-2 w-25 p-2 m-1 rounded culture" data-i18n="event.3.category">ثقافة</a>
+  <a href="event.html?id=3" class="border-2 w-25 p-2 m-1 rounded custom-border" data-i18n="card.details">التفاصيل</a>
+  </div>
+</div>
+<div class="card col-6 m-2 p-1" style="width: 18rem;height: 32rem ">
+  <img src="./assets/dmitry-tomashek-pH7_hVJ65ss-unsplash.jpg" class="card-img-top" alt="..." style="height: 48%;">
+  <div class="card-body">
+    <h5 class="card-title" data-i18n="event.4.title">مباراة الاتحاد والكرامة</h5>
+    <p class="card-text" data-i18n="event.4.location">حلب</p>
+    <p class="card-text" data-i18n="event.4.venue">ستاد حلب الدولي  </p>
+    <p class="card-text" data-i18n="event.4.desc">لا تفوت كلاسيكو الدوري السوري المشتعل </p>
+  <p class="card-date">التاريخ: 2025-12-01</p>
+    <a href="#" class="border-2 w-25 p-2 m-1 rounded  sport" data-i18n="event.4.category">رياضة</a>
+  <a href="event.html?id=4" class="border-2 w-25 p-2 m-1 rounded custom-border    " data-i18n="card.details">التفاصيل</a>
+  </div>
+</div>
 </div>
 
     </div>
