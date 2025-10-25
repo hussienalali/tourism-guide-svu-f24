@@ -92,15 +92,15 @@
       
     }
 
-/* Gallery image sizing: force uniform card height and cover-crop images */
+
 .gallary .card {
   overflow: hidden;
-  height: 200px; /* fixed gallery card height */
+  height: 200px; 
 }
 .gallary .card .card-img-top {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* crop and fill */
+  object-fit: cover; 
   object-position: center center;
   display: block;
 }
