@@ -32,78 +32,7 @@
     cards.forEach(c => c.style.display = '');
   };
 
-  // Render related events dynamically into the .Events .row container
-  function renderRelatedEvents(currentId, isEnglishPage) {
-    try {
-      const relatedRow = document.querySelector('.Events .row');
-      if (!relatedRow) return;
-      // clear current contents
-      relatedRow.innerHTML = '';
-      const dataset = isEnglishPage ? eventsData_en : eventsData;
-      Object.keys(dataset).forEach(key => {
-        if (key === currentId) return; // skip current
-        const ev = dataset[key];
-        const col = document.createElement('div');
-        col.className = 'card m-2 col-6 p-1';
-        col.style.width = '18rem';
-        col.style.height = '33rem';
 
-        const img = document.createElement('img');
-        img.src = ev.img || '';
-        img.className = 'card-img-top';
-        img.alt = ev.title || '';
-
-        const body = document.createElement('div');
-        body.className = 'card-body';
-
-        const h5 = document.createElement('h5');
-        h5.className = 'card-title';
-        h5.textContent = ev.title || '';
-
-        const pLoc = document.createElement('p');
-        pLoc.textContent = ev.location || '';
-
-        const pVenue = document.createElement('p');
-        pVenue.textContent = ev.venue || '';
-
-        const pDesc = document.createElement('p');
-        pDesc.className = 'card-text';
-        pDesc.textContent = ev.desc ? (ev.desc.length > 120 ? ev.desc.substr(0, 117) + '...' : ev.desc) : '';
-
-        const pDate = document.createElement('p');
-        pDate.className = 'card-date';
-        pDate.textContent = (isEnglishPage ? 'Date: ' : 'التاريخ: ') + (ev.date || '');
-
-        const catBtn = document.createElement('a');
-        catBtn.href = '#';
-        catBtn.className = `border-2 w-25 p-2 m-1 rounded ${ev.class || ''}`;
-        catBtn.textContent = ev.category || '';
-
-        const detailsLink = document.createElement('a');
-        detailsLink.href = (isEnglishPage ? 'event_en.html?id=' : 'event.html?id=') + ev.id;
-        detailsLink.className = 'border-2 w-25 p-2 m-1 rounded custom-border';
-        detailsLink.textContent = isEnglishPage ? 'Details' : 'التفاصيل';
-
-        body.appendChild(h5);
-        body.appendChild(pLoc);
-        body.appendChild(pVenue);
-        body.appendChild(pDesc);
-        body.appendChild(pDate);
-        body.appendChild(catBtn);
-        body.appendChild(detailsLink);
-
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.appendChild(img);
-        card.appendChild(body);
-
-        col.appendChild(card);
-        relatedRow.appendChild(col);
-      });
-    } catch (e) {
-      console.warn('renderRelatedEvents failed', e);
-    }
-  }
 })();
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -314,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function populateEventPage(id) {
-    // choose dataset based on page language (event_en.html uses English dataset)
+
     const isEnglishPage = window.location.pathname.includes('_en.html') || window.location.pathname.includes('/en');
     const data = (isEnglishPage && eventsData_en[id]) ? eventsData_en[id] : eventsData[id];
     if (!data) return;
@@ -365,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
       console.warn('Gallery population failed', e);
     }
 
-      // Remove the current event from the related events list (if present)
+  
       try {
         const relatedCards = document.querySelectorAll('.Events .card');
         relatedCards.forEach(card => {
@@ -416,4 +345,5 @@ document.addEventListener('DOMContentLoaded', function() {
     this.reset();
   });
 })();
+
 
